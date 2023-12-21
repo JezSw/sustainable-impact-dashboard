@@ -155,9 +155,14 @@ def get_packages(
             )
     # now that Created Date is the sort key, we need to convert it to str() to use in key. Also we set reverse to True so on top of the list
     # we get the package that is the latest created
-    sorted_dicts = sorted(
-        package_dictionaries, key=lambda k: str(k["sort key"]), reverse=True
-    )
+    if sort_key not in ["loc", "Total Weeks Up", "GitHub Stars", "GitHub Forks", "GitHub Watchers", "GitHub Contributors"]:
+        sorted_dicts = sorted(
+            package_dictionaries, key=lambda k: str(k["sort key"]), reverse=True
+        )
+    else:
+        sorted_dicts = sorted(
+            package_dictionaries, key=lambda k: int(k["sort key"]), reverse=True
+        )
 
     packages = []
     for sorted_dict in sorted_dicts:

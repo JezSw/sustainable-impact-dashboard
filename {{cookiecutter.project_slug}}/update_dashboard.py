@@ -4,7 +4,7 @@ gets some statistics for them.
 """
 
 import os.path
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sksurgerystats.common import (
     get_package_information,
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         fileout.write(head)
 
         all_packages = os.listdir("libraries/")
-        packages = get_packages(sort_key="Created Date")
+        packages = get_packages(sort_key="GitHub Stars")
 
         for count, package in enumerate(packages):
             first_release = get_package_information(package, "Created Date")
@@ -113,7 +113,10 @@ if __name__ == "__main__":
 
             weeks_up = 0
             try:
-                time_up = datetime.now() - datetime.fromisoformat(str(first_release))
+                time_1 = datetime.now(timezone.utc)
+                time_2 = datetime.fromisoformat(str(first_release))
+                time_up = datetime.now(timezone.utc) - datetime.fromisoformat(str(first_release))
+
                 weeks_up = int(time_up.days / 7)
             except ValueError:
                 pass

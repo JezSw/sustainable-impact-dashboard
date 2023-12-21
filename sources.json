@@ -1,0 +1,14 @@
+{
+    "sources": [
+        {
+            "source": "github",
+            "path": "ukaea",
+            "type": "org"
+        },
+        {
+            "source": "github",
+            "path": "JADE-V-V/JADE",
+            "type": "repo"
+        }
+    ]
+}

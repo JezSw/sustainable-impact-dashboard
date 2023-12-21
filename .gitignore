@@ -5,3 +5,6 @@ env
 sksurgerystats/__pycache__
 test_cookiecutter
 dashboard_for_scikit-surgery/
+
+sustainable-impact-dashboard/
+ukaea-impact-dashboard/

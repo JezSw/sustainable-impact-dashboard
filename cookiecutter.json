@@ -1,11 +1,11 @@
 {
-  "author_name": "John Smith",
-  "author_email": "temp@gmail.com",
-  "project_name": "Community Dashboard",
-  "project_slug": "dashboard_for_scikit-surgery",
-  "base_library_name": "scikit-surgery",
-  "project_short_description": "A dashboard template from scikit-surgery",
-  "funder": "JBFC: The Joe Bloggs Funding Council",
-  "licence": ["MIT", "BSD-3", "GPL-3.0"],
+  "author_name": "Jez Swann",
+  "author_email": "jez.swann@ukaea.uk",
+  "project_name": "Dashboard for assessing repository impact",
+  "project_slug": "ukaea-impact-dashboard",
+  "base_library_name": "ukaea",
+  "project_short_description": "A dashboard template for assessing repository impact.",
+  "funder": "UKAEA: UK Atomic Energy Authority",
+  "licence": ["GPL-3.0"],
   "_copy_without_render": [".github/*"]
 }
