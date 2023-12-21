@@ -113,9 +113,10 @@ if __name__ == "__main__":
 
             weeks_up = 0
             try:
-                time_1 = datetime.now(timezone.utc)
-                time_2 = datetime.fromisoformat(str(first_release))
-                time_up = datetime.now(timezone.utc) - datetime.fromisoformat(str(first_release))
+                # time_1 = datetime.now(timezone.utc)
+                # time_2 = datetime.fromisoformat(str(first_release))
+                # time_up = datetime.now(timezone.utc) - datetime.fromisoformat(str(first_release))
+                time_up = datetime.now() - datetime.fromisoformat(str(first_release))
 
                 weeks_up = int(time_up.days / 7)
             except ValueError:

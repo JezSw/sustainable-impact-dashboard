@@ -43,10 +43,10 @@ if __name__ == "__main__":
             )
 
             update_package_information(
-                package, "Created Date", create_date, overwrite=True
+                package, "Created Date", create_date.date().isoformat(), overwrite=True
             )
             update_package_information(
-                package, "Last Update", last_update_date, overwrite=True
+                package, "Last Update", last_update_date.date().isoformat(), overwrite=True
             )
             update_package_information(package, "GitHub Stars", stars, overwrite=True)
             update_package_information(
